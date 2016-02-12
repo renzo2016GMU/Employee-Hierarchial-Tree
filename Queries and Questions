@@ -1,0 +1,39 @@
+1-. Whos is the manager of Krizia sirilan?
+	emp_name(Id,krizia,sirilan),above(ManagerId,Id),emp_name(ManagerId,First,Last).
+
+2-. What are the employes names of unit 3?
+	empinfo(Id,_,unit3),emp_name(Id,Name,Last).
+
+3-.	Who does employee id 1000 manage?
+	manages(Unit,1000),empinfo(Id,_,Unit),emp_name(Id,Name,Last).
+
+4-. Did anyone from unit4 retired?
+	empinfo(Id,_,unit4),emp_name(Id,First,Last),retired(Id,_).
+
+5-. when did the manager of unit2 joined the company?
+	manages(Unit,Id),empinfo(Id,Year,_).
+
+6-. Can you print a list of the employees,comparing which employee has more seniority than the 		other?
+	senior(First,Last,First2,Last2).
+
+7-.	Does anyone share share the same lastname in the company and its not retired?
+	samelastname(Id1,Id2),not(retired(Id1,Id2)), \+(Id1=Id2).
+
+8-. Did anyone retire before 2012?
+	retired(Id,Year),Year<2012,emp_name(Id,Name,Last).
+
+9-.In unit2 who is has worked there the longest?
+	 empinfo(Id1,_,unit2),empinfo(Id2,_,unit2), \+(Id1=Id2),senior(Id1,Id2),emp_name(Id1,Name,Last).
+10-. Is bratt thompson above anybody in the company?
+	above(bratt,thompson,First2,Last2).
+	
+
+
+
+
+
+
+
+
+
+
